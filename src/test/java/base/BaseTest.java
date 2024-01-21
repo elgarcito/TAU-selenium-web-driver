@@ -21,7 +21,7 @@ public class BaseTest {
         List<WebElement> webElements= driver.findElements(By.tagName("a"));
         //webElements.forEach(x-> System.out.println(x.getText()));
 
-        //  Exercise Answer
+        // Chapter 3 finding web elements. Solution.
         WebElement inputLink= driver.findElement(By.cssSelector("a[href=\"/shifting_content\"]"));
         inputLink.click();
         WebElement menuList= driver.findElement(By.cssSelector("a[href=\"/shifting_content/menu\"]"));
