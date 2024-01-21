@@ -21,16 +21,15 @@ public class BaseTest {
         List<WebElement> webElements= driver.findElements(By.tagName("a"));
         //webElements.forEach(x-> System.out.println(x.getText()));
 
+        //  Exercise Answer
         WebElement inputLink= driver.findElement(By.cssSelector("a[href=\"/shifting_content\"]"));
         inputLink.click();
         WebElement menuList= driver.findElement(By.cssSelector("a[href=\"/shifting_content/menu\"]"));
         menuList.click();
         List<WebElement> webElements1=driver.findElements(By.cssSelector("ul>li>a"));
         System.out.println((long) webElements1.size());
-
         System.out.println(driver.getTitle());
         driver.quit();
-
     }
 
 
