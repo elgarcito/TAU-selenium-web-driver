@@ -31,4 +31,8 @@ public class HomePage {
         return new HoversPage(driver);
     }
 
+    public KeyPressesPage clickKeyPressesPage(){
+        clinkLink("Key Presses");
+        return new KeyPressesPage(driver);
+    }
 }
