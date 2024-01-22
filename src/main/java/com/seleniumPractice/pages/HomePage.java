@@ -11,6 +11,7 @@ public class HomePage {
     }
 
     //private By formAuthenticationLink = By.linkText("Form Authentication");
+    private By forgotPasswordLink=By.linkText("Forgot Password");
 
     public LoginPage clickFormAuthentication(){
         //this.driver.findElement(formAuthenticationLink).click();
@@ -24,6 +25,11 @@ public class HomePage {
 
     private void clinkLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
+    }
+
+    public ForgotPasswordPage clickForgotPasswordPage(){
+        driver.findElement(forgotPasswordLink).click();
+        return new ForgotPasswordPage(driver);
     }
 
 }
