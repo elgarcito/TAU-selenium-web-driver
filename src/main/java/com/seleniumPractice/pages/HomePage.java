@@ -26,4 +26,9 @@ public class HomePage {
         driver.findElement(By.linkText(linkText)).click();
     }
 
+    public HoversPage clickHovers(){
+        clinkLink("Hovers");
+        return new HoversPage(driver);
+    }
+
 }
