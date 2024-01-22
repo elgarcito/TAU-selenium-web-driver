@@ -10,10 +10,20 @@ public class HomePage {
         this.driver = driver;
     }
 
-    private By formAuthenticationLink = By.linkText("Form Authentication");
+    //private By formAuthenticationLink = By.linkText("Form Authentication");
 
     public LoginPage clickFormAuthentication(){
-        this.driver.findElement(formAuthenticationLink).click();
+        //this.driver.findElement(formAuthenticationLink).click();
+        clinkLink("Form Authentication");
         return new LoginPage(driver);
     }
+    public DropdownPage clickDropDown(){
+        clinkLink("Dropdown");
+        return new DropdownPage(driver);
+    }
+
+    private void clinkLink(String linkText){
+        driver.findElement(By.linkText(linkText)).click();
+    }
+
 }

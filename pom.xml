@@ -12,6 +12,9 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <testNGVersion>7.9.0</testNGVersion>
+        <seleniumVersion>4.16.1</seleniumVersion>
+        <seleniumSupportVersion>4.16.1</seleniumSupportVersion>
     </properties>
 
     <dependencies>
@@ -19,7 +22,7 @@
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>7.9.0</version>
+            <version>${testNGVersion}</version>
             <scope>test</scope>
         </dependency>
 
@@ -27,10 +30,14 @@
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.16.1</version>
+            <version>${seleniumVersion}</version>
         </dependency>
-
-
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-support -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-support</artifactId>
+            <version>${seleniumSupportVersion}</version>
+        </dependency>
     </dependencies>
 
 </project>
