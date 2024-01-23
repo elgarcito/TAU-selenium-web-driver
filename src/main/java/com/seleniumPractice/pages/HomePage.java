@@ -35,4 +35,9 @@ public class HomePage {
         clinkLink("Key Presses");
         return new KeyPressesPage(driver);
     }
+
+    public AlertPage clickJavaScriptAlerts(){
+        clinkLink("JavaScript Alerts");
+        return new AlertPage(driver);
+    }
 }
