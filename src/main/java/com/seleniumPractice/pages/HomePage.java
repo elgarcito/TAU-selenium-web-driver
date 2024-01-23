@@ -40,4 +40,9 @@ public class HomePage {
         clinkLink("JavaScript Alerts");
         return new AlertPage(driver);
     }
+
+    public FileUploadPage clickFileUploadPage(){
+        clinkLink("File Upload");
+        return new FileUploadPage(driver);
+    }
 }
