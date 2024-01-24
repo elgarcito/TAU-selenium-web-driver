@@ -50,4 +50,9 @@ public class HomePage {
         clinkLink("WYSIWYG Editor");
         return new WysiwygEditorPage(driver);
     }
+
+    public NestedFramesPage clickNestedFramesPage(){
+        clinkLink("Nested Frames");
+        return new NestedFramesPage(driver);
+    }
 }
