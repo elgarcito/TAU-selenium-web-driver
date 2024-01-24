@@ -28,7 +28,7 @@ To solve this problem:
 * Created the ContextMenuPage
 * Created the By element box
 * Created 3 methods:
-  * rightClikBox() using WebElement and Actions classes that do the right click in the box
+  * rightClickBox() using WebElement and Actions classes that do the right click in the box
   * alertGetText() that gets the text of the alert
   * acceptAlert() that click the accepted button in the alert.
 * The chapter7test package was created

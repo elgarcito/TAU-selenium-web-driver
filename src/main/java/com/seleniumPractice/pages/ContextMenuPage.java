@@ -5,8 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-import javax.swing.*;
-
 public class ContextMenuPage {
     private WebDriver driver;
     private By box= By.id("hot-spot");
@@ -16,7 +14,7 @@ public class ContextMenuPage {
         this.driver = driver;
     }
 
-    public void rightClikBox(){
+    public void rightClickBox(){
         WebElement elementBox= driver.findElement(box);
         Actions actions=new Actions(driver);
         actions.moveToElement(elementBox).contextClick().perform();

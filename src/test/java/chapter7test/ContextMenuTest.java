@@ -10,7 +10,7 @@ public class ContextMenuTest extends BaseTest {
     @Test
     public void testAlertTextInContextMenu(){
         ContextMenuPage contextMenuPage=homePage.clickContextMenuPage();
-        contextMenuPage.rightClikBox();
+        contextMenuPage.rightClickBox();
         String alertText= contextMenuPage.alertGetText();
         contextMenuPage.acceptAlert();
         assertEquals(alertText,"You selected a context menu","The alert message is wrong");
