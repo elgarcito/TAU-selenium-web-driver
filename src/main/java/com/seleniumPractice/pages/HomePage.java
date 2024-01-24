@@ -45,4 +45,9 @@ public class HomePage {
         clinkLink("File Upload");
         return new FileUploadPage(driver);
     }
+
+    public WysiwygEditorPage clickWysiwygEditorPage(){
+        clinkLink("WYSIWYG Editor");
+        return new WysiwygEditorPage(driver);
+    }
 }
