@@ -12,37 +12,44 @@ public class HomePage {
 
     //private By formAuthenticationLink = By.linkText("Form Authentication");
 
-    public LoginPage clickFormAuthentication(){
+    public LoginPage clickFormAuthentication() {
         //this.driver.findElement(formAuthenticationLink).click();
         clinkLink("Form Authentication");
         return new LoginPage(driver);
     }
-    public DropdownPage clickDropDown(){
+
+    public DropdownPage clickDropDown() {
         clinkLink("Dropdown");
         return new DropdownPage(driver);
     }
 
-    private void clinkLink(String linkText){
+    private void clinkLink(String linkText) {
         driver.findElement(By.linkText(linkText)).click();
     }
 
-    public HoversPage clickHovers(){
+    public HoversPage clickHovers() {
         clinkLink("Hovers");
         return new HoversPage(driver);
     }
 
-    public KeyPressesPage clickKeyPressesPage(){
+    public KeyPressesPage clickKeyPressesPage() {
         clinkLink("Key Presses");
         return new KeyPressesPage(driver);
     }
 
-    public AlertPage clickJavaScriptAlerts(){
+    public AlertPage clickJavaScriptAlerts() {
         clinkLink("JavaScript Alerts");
         return new AlertPage(driver);
     }
 
-    public FileUploadPage clickFileUploadPage(){
+    public FileUploadPage clickFileUploadPage() {
         clinkLink("File Upload");
         return new FileUploadPage(driver);
     }
+
+    public ContextMenuPage clickContextMenuPage(){
+        clinkLink("Context Menu");
+        return new ContextMenuPage(driver);
+    }
+
 }
