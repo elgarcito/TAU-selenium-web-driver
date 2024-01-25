@@ -50,4 +50,9 @@ public class HomePage {
         clinkLink("WYSIWYG Editor");
         return new WysiwygEditorPage(driver);
     }
+
+    public DynamicLoadingPage clickDynamicLoadingPage(){
+        clinkLink("Dynamic Loading");
+        return new DynamicLoadingPage(driver);
+    }
 }

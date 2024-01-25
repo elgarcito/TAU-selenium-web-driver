@@ -12,6 +12,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
     private WebDriver driver;
@@ -22,6 +23,10 @@ public class BaseTest {
 
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
         driver = new ChromeDriver();
+        //wait amount of time to a page to load until complete before throw an error
+        //driver.manage().timeouts().pageLoadTimeout(10,TimeUnit.SECONDS);
+        //Only wait the amount of time given
+        //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         goHome();
         //driver.manage().window().setSize(new Dimension(375,812));
         homePage=new HomePage(driver);
