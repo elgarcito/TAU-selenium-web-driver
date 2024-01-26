@@ -55,4 +55,9 @@ public class HomePage {
         clinkLink("Dynamic Loading");
         return new DynamicLoadingPage(driver);
     }
+
+    public ModalPage clickModalPage(){
+        clinkLink("Entry Ad");
+        return new ModalPage(driver);
+    }
 }
