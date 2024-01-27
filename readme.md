@@ -15,17 +15,24 @@ have a separate branch.
 For your optional exercise for this chapter,
 go to the Dropdown link, and we're going to use JavaScript to change this element.
 If we inspect this element, we can get the JSpath, here.
+
+
 That's just so I can show you what this looks like in the dev tools. If I do this, 
 I can get the element, but we already know how to get the element in Selenium WebDriver.
 Don't copy that part.
+
 However, this is the part that I want you to use.
 We call setAttribute.
 Let's change that dropdown to allow for multiple selections. The way we do that is by adding a multiple attribute to the element.
 We can then say “multiple”, and this doesn't take a value, so we'll just leave it blank, and then enter.
 Notice this dropdown has now changed so that you can select more than one option.
+
 In your test automation code:
 Add JavaScript to change that dropdown, and then select both Option 1 and Option 2
+
 In your test, verify that you have those two selected, and that they're “Option 1” and “Option 2”
+
+Javascript script given:
 
 arguments[0].setAttribute('multiple', '')
 
