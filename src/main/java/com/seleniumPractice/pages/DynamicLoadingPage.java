@@ -24,7 +24,13 @@ public class DynamicLoadingPage {
         return new DynamicLoadingExample1Page(driver);
     }
 
-    public void openLink2InNewTab(){
+    public DynamicLoadingExample2Page clickExample2(){
+        driver.findElement(linkExample2).click();
+        return new DynamicLoadingExample2Page(driver);
+    }
+
+    public DynamicLoadingExample2Page openLink2InNewTab(){
         driver.findElement(linkExample2).sendKeys(Keys.chord(Keys.CONTROL,Keys.ENTER));
+        return new DynamicLoadingExample2Page(driver);
     }
 }

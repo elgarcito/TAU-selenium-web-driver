@@ -24,3 +24,18 @@ So, if you need to use the Keys or the Action classes to help you out, then do s
 After opening this link in a new tab, switch over to it and verify that the “Start” button is there.
 
 ### Solution
+To solve this problem:
+
+We have already created the DynamicLoadingPage.java so in that class added the
+* Created the openLink2InNewTab() method: that opens the example 2 in a new tab  
+* We have already created DynamicLoadingExample2Page.java so we copy in this example and
+added the getStartButtonText() that retrieve us the text of the start button
+* Created the switchToNewTab() in WindowManager.java that switch to the new tab opened
+without giving a tab name.
+
+Finally, the DynamicLoadingNavigationTest.java was created in chapter11exercise package and the test does the following:
+1. Enter the page Dynamic Loading page.
+2. Perform a CTR+ENTER on the Example 2 link
+3. Go to the new tab opened
+4. Compare the result of the getStartButtonText() method with "Start," if it fails, the test stops.
+If the message is equal, the test passes.
