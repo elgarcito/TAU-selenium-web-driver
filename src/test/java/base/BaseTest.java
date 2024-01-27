@@ -1,9 +1,11 @@
 package base;
 
 import com.seleniumPractice.pages.HomePage;
+import com.seleniumPractice.utils.EventReporter;
 import com.seleniumPractice.utils.WindowManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 
@@ -14,14 +16,17 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
-    private WebDriver driver;
+    //private WebDriver driver;
+    private EventFiringWebDriver driver;
     protected HomePage homePage;
 
     @BeforeClass
     public void setUp() {
 
         System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
-        driver = new ChromeDriver();
+        //driver = new ChromeDriver();
+        driver = new EventFiringWebDriver(new ChromeDriver());
+        driver.register(new EventReporter());
         //wait amount of time to a page to load until complete before throw an error
         //driver.manage().timeouts().pageLoadTimeout(10,TimeUnit.SECONDS);
         //Only wait the amount of time given
