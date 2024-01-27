@@ -1,6 +1,7 @@
 package base;
 
 import com.seleniumPractice.pages.HomePage;
+import com.seleniumPractice.utils.WindowManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
@@ -50,5 +51,9 @@ public class BaseTest {
 //        BaseTest test =new BaseTest();
 //        test.setUp();
 //    }
+
+    public WindowManager getWindowManager(){
+        return new WindowManager(driver);
+    }
 
 }

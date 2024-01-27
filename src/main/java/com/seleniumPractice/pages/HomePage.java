@@ -70,4 +70,9 @@ public class HomePage {
         clinkLink("Infinite Scroll");
         return new InfiniteScrollPage(driver);
     }
+
+    public MultipleWindowsPage clickMultipleWindows(){
+        clinkLink("Multiple Windows");
+        return new MultipleWindowsPage(driver);
+    }
 }
