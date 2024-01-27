@@ -60,4 +60,14 @@ public class HomePage {
         clinkLink("Entry Ad");
         return new ModalPage(driver);
     }
+
+    public LargeAndDeepDomPage clickLargeAndDeepDomPage(){
+        clinkLink("Large & Deep DOM");
+        return new LargeAndDeepDomPage(driver);
+    }
+
+    public InfiniteScrollPage clickInfiniteScrollPage(){
+        clinkLink("Infinite Scroll");
+        return new InfiniteScrollPage(driver);
+    }
 }
