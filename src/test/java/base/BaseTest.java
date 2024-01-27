@@ -2,16 +2,14 @@ package base;
 
 import com.seleniumPractice.pages.HomePage;
 import com.seleniumPractice.utils.WindowManager;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.ITestResult;
+import org.testng.annotations.*;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -52,6 +50,35 @@ public class BaseTest {
 //        test.setUp();
 //    }
 
+    /* Take screenshot after each test
+    @AfterMethod
+    public void takeScreenshot(){
+        var camera=(TakesScreenshot)driver;
+        File screenshot=camera.getScreenshotAs(OutputType.FILE);
+        //System.out.println(String.format("Screenshot taken: %s",screenshot.getAbsoluteFile()));
+        try {
+            Files.move(screenshot.toPath(), new File("src/main/resources/screenshots/test.png").toPath());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+     */
+
+    @AfterMethod
+    public void recordFailure(ITestResult result){
+        if(ITestResult.FAILURE==result.getStatus()) {
+            var camera = (TakesScreenshot) driver;
+            File screenshot = camera.getScreenshotAs(OutputType.FILE);
+            //System.out.println(String.format("Screenshot taken: %s",screenshot.getAbsoluteFile()));
+            try {
+                Files.move(screenshot.toPath(), new File(String.format("src/main/resources/screenshots/%s.png",result.getName()))
+                        .toPath());
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
     public WindowManager getWindowManager(){
         return new WindowManager(driver);
     }
